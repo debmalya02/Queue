@@ -6,16 +6,16 @@ int rear = -1;
 int isemty()
 {
     if (front == -1 || front > rear)
-        return true;
+        return 0;
     else
-        return false;
+        return 1;
 }
 int isfull()
 {
     if (rear == 4)
-        return true;
+        return 0;
     else
-        return false;
+        return 1;
 }
 void enqueue()
 {
