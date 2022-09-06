@@ -53,15 +53,9 @@ void enqueue(q *pos)
         printf("Enter the element to push in the queue : ");
         scanf("%d", &n);
         if (pos->rear == -1)
-        {
             pos->front = pos->rear = 0;
-            pos->arr[pos->rear] = n;
-        }
-        else
-        {
-            pos->rear = (pos->rear + 1) % size;
-            pos->arr[pos->rear] = n;
-        }
+        pos->rear = (pos->rear + 1) % size;
+        pos->arr[pos->rear] = n;
     }
 }
 void dequeue(q *pos)
